@@ -1,12 +1,132 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <meta charset="UTF-8">
+    <title>Sedona</title>
   </head>
   <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <a class="main-nav__logo" href="#">
+          <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип Седоны">
+        </a>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Информация</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Карта штата</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <main>
+      <h1 class="visually-hidden">Городок Седона</h1>
 
+      <section class="intro">
+        <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
+        <img src="img/welcome-sedona.svg" width="458" height="352" alt="Добро пожаловать в Седону">
+      </section>
+
+      <section class="advantages">
+        <p>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+        <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
+        <ul>
+          <li>
+            <h3>Настоящий городок
+              <span>— №1 —</span>
+            </h3>
+            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img src="img/" width="" height="" alt="Фото городка Седона">
+            <!-- Далее вложенный список для пункта №1 «Настоящий городок» -->
+            <ul>
+              <li>
+                <h4>Жильё</h4>
+                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li>
+                <h4>Еда</h4>
+                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li>
+                <h4>Сувениры</h4>
+                <p>Не только китайского, но и местного производства!</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <img src="img/" width="" height="" alt="Фото Моста дьявола">
+            <h3>Там есть Мост дьявола
+              <span>— №2 —</span>
+            </h3>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </li>
+          <li>
+            <h3>Небольшая площадь
+              <span>— №3 —</span>
+            </h3>
+            <p>Все достопримечательности находятся очень близко</p>
+          </li>
+          <li>
+            <h3>Красивая дорога
+              <span>— №4 —</span>
+            </h3>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+          <li>
+            <h3>Мало туристов
+              <span>— №5 —</span>
+            </h3>
+            <p>Большинство едет в гранд каньон и толпится там</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <p>Заинтересовались?</p>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <h2>Поиск гостиницы в Седоне</h2>
+        <form>
+          <!-- Здесь будет форма -->
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <h2 class="visually-hidden">Наши контакты</h2>
+      <img class="page-footer__map" src="img/" width="" height="" alt="Седона на карте. Как проехать?">
+      <p class="page-footer__contact">
+        <a href="#">#visitSedona</a>
+        Тел: +7(495) 666-02-66
+      </p>
+      <ul class="page-footer__list social">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <span class="visually-hidden">YouTube</span>
+          </a>
+        </li>
+      </ul>
+      <p class="page-footer__copyright">
+        Website by
+        <a href="https://htmlacademy.ru">HTML Academy</a>
+      </p>
+    </footer>
   </body>
 </html>
