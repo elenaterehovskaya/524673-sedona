@@ -8,7 +8,7 @@
     <header class="page-header">
       <nav class="main-nav">
         <a class="main-nav__logo" href="index.html">
-          <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип Седоны">
+          <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип городка Седона">
         </a>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -32,8 +32,45 @@
 
       <section class="filter">
         <h2 class="visually-hidden">Фильтр поиска</h2>
-        <form>
-          <!-- Здесь будет форма -->
+        <form class="filter__form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li class="filter__option">
+                <input class="visually-hidden" id="filter-pool" type="checkbox" name="pool" checked>
+                <label for="filter-pool">Бассейн</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden" id="filter-parking" type="checkbox" name="parking">
+                <label for="filter-parking">Парковка</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden" id="filter-wi-fi" type="checkbox" name="wi-fi">
+                <label for="filter-wi-fi">Wi-fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li class="filter__option">
+                <input class="visually-hidden" id="filter-hotel" type="checkbox" name="hotel" checked>
+                <label for="filter-hotel">Гостиница</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden" id="filter-motel" type="checkbox" name="motel" checked>
+                <label for="filter-motel">Мотель</label>
+              </li>
+              <li class="filter__option">
+                <input class="visually-hidden" id="filter-apartment" type="checkbox" name="apartment" checked>
+                <label for="filter-apartment">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+          </fieldset>
+          <button type="submit">Показать</button>
         </form>
       </section>
 
@@ -50,7 +87,7 @@
               От 4000 Р.
               <a href="#">Забронировать</a>
             </p>
-            <img src="img/hotel-1.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
+            <img src="img/hotel-1.jpg" width="135" height="90" alt="Вид на гостиницу Amara Resort & Spa">
             <p>Рейтинг: 8,5</p>
           </li>
           <li>
@@ -63,7 +100,7 @@
               От 3000 Р.
               <a href="#">Забронировать</a>
             </p>
-            <img src="img/hotel-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
+            <img src="img/hotel-2.jpg" width="135" height="90" alt="Вид на мотель Desert Quail Inn">
             <p>Рейтинг: 8,9</p>
           </li>
           <li>
@@ -76,7 +113,7 @@
               От 2000 Р.
               <a href="#">Забронировать</a>
             </p>
-            <img src="img/hotel-3.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
+            <img src="img/hotel-3.jpg" width="135" height="90" alt="Вид на апартаменты Villas at Poco Diablo">
             <p>Рейтинг: 9,2</p>
           </li>
         </ul>
@@ -91,24 +128,18 @@
       </p>
       <ul class="page-footer__list social">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank">
-            <span class="visually-hidden">Твиттер</span>
-          </a>
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank" aria-label="Твиттер"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Фейсбук"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-            <span class="visually-hidden">YouTube</span>
-          </a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" aria-label="YouTube"></a>
         </li>
       </ul>
       <p class="page-footer__copyright">
         Website by
-        <a href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="page-footer__copyright-logo" href="https://htmlacademy.ru" target="_blank" aria-label="Переход на сайт HTML Academy"></a>
       </p>
     </footer>
   </body>
