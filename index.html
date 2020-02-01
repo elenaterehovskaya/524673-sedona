@@ -8,7 +8,7 @@
     <header class="page-header">
       <nav class="main-nav">
         <a class="main-nav__logo" href="#">
-          <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип Седоны">
+          <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип городка Седона">
         </a>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -32,11 +32,11 @@
 
       <section class="intro">
         <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
-        <img class="intro__slogan" src="img/intro-welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
+        <img class="intro__slogan" src="img/intro-welcome.svg" width="458" height="352" alt="Welcome to the gourgeous Sedona!">
       </section>
 
       <section class="advantages">
-        <p class="advantages__slogan">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+        <p class="advantages__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <h2 class="advantages__title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
@@ -44,7 +44,7 @@
               <span>— №1 —</span>
             </h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="img/sedona-town.jpg" width="800" height="256" alt="Фото городка Седона">
+            <img src="img/sedona-town.jpg" width="800" height="256" alt="Административное здание в городке Седона">
             <!-- Далее вложенный список для пункта №1 «Настоящий городок» -->
             <ul>
               <li>
@@ -62,7 +62,7 @@
             </ul>
           </li>
           <li class="advantages__item">
-            <img src="img/sedona-bridge.jpg" width="800" height="256" alt="Фото Моста дьявола">
+            <img src="img/sedona-bridge.jpg" width="800" height="256" alt="Вид на Мост дьявола">
             <h3>Там есть Мост дьявола
               <span>— №2 —</span>
             </h3>
@@ -93,10 +93,26 @@
         <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <h2 class="search-hotels__title">Поиск гостиницы в Седоне</h2>
-        <form>
-          <!-- Здесь будет форма -->
+        <form action="https://echo.htmlacademy.ru" method="post" target="_blank" autocomplete="off">
+          <p>
+            <label for="arrival-date">Дата заезда:</label>
+            <input id="arrival-date" type="date" name="arrival-date" value="" placeholder="24 апреля 2017">
+          </p>
+          <p>
+            <label for="departure-date">Дата выезда:</label>
+            <input id="departure-date" type="date" name="departure-date" value="" placeholder="4 июля 2017">
+          </p>
+          <p>
+            <label for="adults">Взрослые:</label>
+            <input id="adults" type="number" name="adults" value="" placeholder="2">
+          </p>
+          <p>
+            <label for="children">Дети:</label>
+            <input id="children" type="number" name="children" value="" placeholder="0">
+          </p>
+          <button class="button" type="submit">Найти</button>
         </form>
-        <img class="search-hotels__map" src="img/map.jpg" width="1200" height="593" alt="Седона на карте. Как проехать?">
+        <img class="search-hotels__map" src="img/map.jpg" width="1200" height="593" alt="Городок Седона на карте. Как проехать?">
       </section>
     </main>
 
@@ -108,24 +124,18 @@
       </p>
       <ul class="page-footer__list social">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank">
-            <span class="visually-hidden">Твиттер</span>
-          </a>
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru" target="_blank" aria-label="Твиттер"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" target="_blank" aria-label="Фейсбук"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-            <span class="visually-hidden">YouTube</span>
-          </a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" aria-label="YouTube"></a>
         </li>
       </ul>
       <p class="page-footer__copyright">
         Website by
-        <a class="page-footer__copyright-logo" href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="page-footer__copyright-logo" href="https://htmlacademy.ru" target="_blank" aria-label="Переход на сайт HTML Academy"></a>
       </p>
     </footer>
   </body>
