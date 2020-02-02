@@ -33,8 +33,8 @@
       <section class="filter">
         <h2 class="visually-hidden">Фильтр поиска</h2>
         <form class="filter__form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
-          <fieldset>
-            <legend>Инфраструктура:</legend>
+          <fieldset class="filter__choice">
+            <legend class="filter__title">Инфраструктура:</legend>
             <ul>
               <li class="filter__option">
                 <input class="visually-hidden" id="filter-pool" type="checkbox" name="pool" checked>
@@ -50,8 +50,8 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
-            <legend>Тип жилья:</legend>
+          <fieldset class="filter__choice">
+            <legend class="filter__title">Тип жилья:</legend>
             <ul>
               <li class="filter__option">
                 <input class="visually-hidden" id="filter-hotel" type="checkbox" name="hotel" checked>
@@ -67,49 +67,49 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
-            <legend>Стоимость в сутки (Р):</legend>
+          <fieldset class="filter__choice">
+            <legend class="filter__title">Стоимость в сутки (Р):</legend>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="filter__button" type="submit">Показать</button>
         </form>
       </section>
 
       <section class="result">
         <h2 class="visually-hidden">Результат поиска</h2>
-        <ul>
-          <li>
-            <h3>Amara Resort & Spa</h3>
-            <p>
+        <ul class="result__list">
+          <li class="result__item">
+            <h3 class="result__caption">Amara Resort & Spa</h3>
+            <p class="result__name">
               Гостиница
               <a href="#">Подробнее</a>
             </p>
-            <p>
+            <p class="result__price">
               От 4000 Р.
               <a href="#">Забронировать</a>
             </p>
             <img src="img/hotel-1.jpg" width="135" height="90" alt="Вид на гостиницу Amara Resort & Spa">
             <p>Рейтинг: 8,5</p>
           </li>
-          <li>
-            <h3>Desert Quail Inn</h3>
-            <p>
+          <li class="result__item">
+            <h3 class="result__caption">Desert Quail Inn</h3>
+            <p class="result__name">
               Мотель
               <a href="#">Подробнее</a>
             </p>
-            <p>
+            <p class="result__price">
               От 3000 Р.
               <a href="#">Забронировать</a>
             </p>
             <img src="img/hotel-2.jpg" width="135" height="90" alt="Вид на мотель Desert Quail Inn">
             <p>Рейтинг: 8,9</p>
           </li>
-          <li>
-            <h3>Villas at Poco Diablo</h3>
-            <p>
+          <li class="result__item">
+            <h3 class="result__caption">Villas at Poco Diablo</h3>
+            <p class="result__name">
               Апартаменты
               <a href="#">Подробнее</a>
             </p>
-            <p>
+            <p class="result__price">
               От 2000 Р.
               <a href="#">Забронировать</a>
             </p>
