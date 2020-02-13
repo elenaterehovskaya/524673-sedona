@@ -72,6 +72,10 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
+.main-nav__logo {
+  position: absolute;
+}
+
 /*
 Блок site-list — блок меню сайта — в блоке навигации main-nav__list
  */
@@ -95,7 +99,7 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-list__link--active {
+.site-list__link--current {
   color: #766357;
 }
 
@@ -170,7 +174,7 @@ input[type="radio"].visually-hidden {
 ========================================================================== */
 .filter {
   color: #ffffff;
-  background: #81b3d2 url(../img/filter-background.jpg) top center no-repeat
+  background: #81b3d2 url(../img/filter-background.jpg) top center no-repeat;
 }
 
 .filter__choice {
