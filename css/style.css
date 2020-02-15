@@ -70,19 +70,24 @@ input[type="radio"].visually-hidden {
 ========================================================================== */
 .main-nav {
   position: relative;
+  box-shadow: inset 0 0 0 1px red;
 }
 
 .main-nav__logo {
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*
 Блок site-list — блок меню сайта — в блоке навигации main-nav__list
  */
 .site-list {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 73px;
   list-style: none;
+  box-shadow: inset 0 0 0 1px red;
 }
 
 .site-list__link {
@@ -109,56 +114,117 @@ input[type="radio"].visually-hidden {
 .intro {
   height: 510px;
   padding-top: 75px;
-  background: #81b3d2 url(../img/background-photo.jpg) top center no-repeat;
+  background: #81b3d2 url(../img/background-photo.jpg) top -55px center no-repeat;
+}
+
+.intro__slogan {
+  box-shadow: inset 0 0 0 1px red;
 }
 
 /*
 Блок advantages — блок преимуществ для главной стр. сайта
 ========================================================================== */
 .advantages__slogan {
+  width: 576px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 30px;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: #000000;
+  box-shadow: inset 0 0 0 1px red;
 }
 
 .advantages__headline {
+  width: 576px;
+  margin: 0 auto;
+  padding-bottom: 40px;
   font: inherit;
+  box-shadow: inset 0 0 0 1px red;
 }
 
 .advantages__list,
 .advantages__sublist {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
   background-color: #eeeeee;
 }
 
+.advantages__item,
+.advantages__subitem {
+  width: calc(100% / 3);
+  padding-top: 50px;
+  padding-bottom: 60px;
+  box-shadow: inset 0 0 0 1px red;
+}
+
+.advantages__item:nth-child(1),
+.advantages__item:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  background-color: #81b3d2;
+}
+
+.advantages__sublist {
+  width: 100%;
+  background-color: #ffffff;
+}
+
 .advantages__title {
+  margin: 0;
+  padding: 0 130px;
   font-weight: 700;
   font-size: 21px;
+  color: #000000;
+  box-shadow: inset 0 0 0 1px red;
+}
+
+.advantages__description {
+  margin: 0;
+  padding: 0 50px;
 }
 
 .advantages__description span {
   display: block;
 }
 
-.advantages__sublist {
-  background-color: #ffffff;
+.advantages__photo {
+  display: block;
 }
 
 /*
 Блок search-hotels — блок поиска гостиницы для главной стр. сайта
 ========================================================================== */
 .search-hotels__slogan {
+  width: 576px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 30px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
+  box-shadow: inset 0 0 0 1px red;
 }
 
 .search-hotels__info {
+  width: 576px;
+  margin: 0 auto;
+  padding-bottom: 30px;
   line-height: 24px;
+  box-shadow: inset 0 0 0 1px red;
+}
+
+.search-hotels__headline {
+  width: 576px;
+  margin: 0 auto;
+  box-shadow: inset 0 0 0 1px red;
 }
 
 .search-hotels__form {
@@ -195,20 +261,46 @@ input[type="radio"].visually-hidden {
 /*
 Блок result — блок результата поиска гостиницы для стр. каталога
 ========================================================================== */
+.result {
+  margin-bottom: 120px;
+  text-align: left;
+  box-shadow: inset 0 0 0 1px red;
+}
+
 .result__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.result__item {
+  display: flex;
+  padding: 30px 73px;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: inset 0 0 0 1px red;
+}
+
 .result__title {
+  margin: 0;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: #000000;
+  box-shadow: inset 0 0 0 1px red;
+}
+
+.result__name {
+  margin: 0;
+  box-shadow: inset 0 0 0 1px red;
+}
+
+.result__price {
+  margin: 0;
+  box-shadow: inset 0 0 0 1px red;
 }
 
 .result__button {
+  display: block;
   font-weight: 700;
   color: #ffffff;
   background-color: #81b3d2;
@@ -218,9 +310,24 @@ input[type="radio"].visually-hidden {
   background-color: #766357;
 }
 
+.result__photo {
+  order: -1;
+}
+
+.result__rating {
+  margin: 0;
+  box-shadow: inset 0 0 0 1px red;
+}
+
 /*
 Блок page-footer — блок контактов для главной стр. сайта и для каталога
 ========================================================================== */
+.page-footer {
+  position: relative;
+  height: 120px;
+  margin-top: -120px;
+  background-color: rgba(254, 254, 254, 0.9);
+}
 .page-footer__contact {
   margin: 0;
   font-weight: 700;
