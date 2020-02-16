@@ -37,7 +37,7 @@
         <section class="filter">
           <h2 class="visually-hidden">Фильтр поиска</h2>
           <form class="filter__form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
-            <fieldset class="filter__choice">
+            <fieldset class="filter__choice filter__choice--infra">
               <legend class="filter__title">Инфраструктура:</legend>
               <ul class="filter__list">
                 <li class="filter__option">
@@ -54,7 +54,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__choice">
+            <fieldset class="filter__choice filter__choice--type">
               <legend class="filter__title">Тип жилья:</legend>
               <ul class="filter__list">
                 <li class="filter__option">
@@ -71,10 +71,12 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__choice">
-              <legend class="filter__title">Стоимость в сутки (Р):</legend>
-            </fieldset>
-            <button class="filter__button" type="submit">Показать</button>
+            <div>
+              <fieldset class="filter__choice filter__choice--cost">
+                <legend class="filter__title">Стоимость в сутки (Р):</legend>
+              </fieldset>
+              <button class="filter__button button" type="submit">Показать</button>
+            </div>
           </form>
         </section>
 

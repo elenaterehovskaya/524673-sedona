@@ -52,7 +52,7 @@ input[type="radio"].visually-hidden {
 Блок content — для контентной части сайта на главной стр. и на стр. каталога
 ========================================================================== */
 .content {
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
@@ -63,6 +63,19 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   background-color: #ffffff;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*
+Блок button — кнопка
+ */
+.button {
+  padding: 5px 30px;
+  font: inherit;
+  color:#ffffff;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
 /*
@@ -239,12 +252,35 @@ input[type="radio"].visually-hidden {
 Блок filter — блок фильтров для поиска гостиницы для стр. каталога
 ========================================================================== */
 .filter {
+  margin: 0 auto;
+  padding: 30px 73px;
+  text-align: left;
   color: #ffffff;
   background: #81b3d2 url(../img/filter-background.jpg) top center no-repeat;
 }
 
+.filter__form {
+  display: flex;
+}
+
 .filter__choice {
+  margin: 0;
+  padding: 0;
   border: none;
+  box-shadow: inset 0 0 0 1px red;
+}
+
+.filter__choice--infra,
+.filter__choice--type {
+  width: 25%;
+}
+
+.filter__choice--type {
+  margin-right: auto;
+}
+
+.filter__choice--cost {
+  width: 328px;
 }
 
 .filter__title {
@@ -256,6 +292,10 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.filter__option {
+  margin-top: 25px;
 }
 
 /*
