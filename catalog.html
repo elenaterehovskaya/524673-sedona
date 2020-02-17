@@ -82,44 +82,73 @@
 
         <section class="result">
           <h2 class="visually-hidden">Результат поиска</h2>
+          <div class="result__sort sort">
+            <p class="sort__info">Найдено: 3</p>
+            <p class="sort__caption">Сортировка:</p>
+            <ul class="sort__list">
+              <li>
+                <a class="sort__link sort__link--current" href="#">По цене</a>
+              </li>
+              <li>
+                <a class="sort__link" href="#">По типу</a>
+              </li>
+              <li>
+                <a  class="sort__link" href="#">По рейтингу</a>
+              </li>
+            </ul>
+            <ul class="sort__list-value">
+              <li>
+                <a class="sort__link-value" href="#" aria-label="Сортировка по возрастанию">&#9650;</a>
+              </li>
+              <li>
+                <a class="sort__link-value sort__link-value--current" href="#" aria-label="Сортировка по убыванию">&#9660;</a>
+              </li>
+            </ul>
+          </div>
           <ul class="result__list">
             <li class="result__item">
-              <h3 class="result__title">Amara Resort & Spa</h3>
-              <p class="result__name">
-                Гостиница
-                <a class="result__button" href="#">Подробнее</a>
-              </p>
-              <p class="result__price">
-                От 4000 Р.
-                <a class="result__button result__button--booking" href="#">Забронировать</a>
-              </p>
               <img class="result__photo" src="img/hotel-1.jpg" width="135" height="90" alt="Вид на гостиницу Amara Resort & Spa">
+              <div class="result__info">
+                <h3 class="result__title">Amara Resort & Spa</h3>
+                <p class="result__name">
+                  Гостиница
+                  <a class="result__button" href="#">Подробнее</a>
+                </p>
+                <p class="result__price">
+                  От 4000 Р.
+                  <a class="result__button result__button--booking" href="#">Забронировать</a>
+                </p>
+              </div>
               <p class="result__rating">Рейтинг: 8,5</p>
             </li>
             <li class="result__item">
-              <h3 class="result__title">Desert Quail Inn</h3>
-              <p class="result__name">
-                Мотель
-                <a class="result__button" href="#">Подробнее</a>
-              </p>
-              <p class="result__price">
-                От 3000 Р.
-                <a class="result__button result__button--booking" href="#">Забронировать</a>
-              </p>
               <img class="result__photo" src="img/hotel-2.jpg" width="135" height="90" alt="Вид на мотель Desert Quail Inn">
+              <div class="result__info">
+                <h3 class="result__title">Desert Quail Inn</h3>
+                <p class="result__name">
+                  Мотель
+                  <a class="result__button" href="#">Подробнее</a>
+                </p>
+                <p class="result__price">
+                  От 3000 Р.
+                  <a class="result__button result__button--booking" href="#">Забронировать</a>
+                </p>
+              </div>
               <p class="result__rating">Рейтинг: 8,9</p>
             </li>
             <li class="result__item">
-              <h3 class="result__title">Villas at Poco Diablo</h3>
-              <p class="result__name">
-                Апартаменты
-                <a class="result__button" href="#">Подробнее</a>
-              </p>
-              <p class="result__price">
-                От 2000 Р.
-                <a class="result__button result__button--booking" href="#">Забронировать</a>
-              </p>
               <img class="result__photo" src="img/hotel-3.jpg" width="135" height="90" alt="Вид на апартаменты Villas at Poco Diablo">
+              <div class="result__info">
+                <h3 class="result__title">Villas at Poco Diablo</h3>
+                <p class="result__name">
+                  Апартаменты
+                  <a class="result__button" href="#">Подробнее</a>
+                </p>
+                <p class="result__price">
+                  От 2000 Р.
+                  <a class="result__button result__button--booking" href="#">Забронировать</a>
+                </p>
+              </div>
               <p class="result__rating">Рейтинг: 9,2</p>
             </li>
           </ul>
@@ -145,7 +174,9 @@
         </ul>
         <p class="page-footer__copyright">
           Website by
-          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru" target="_blank" aria-label="Переход на сайт HTML Academy"></a>
+          <a class="page-footer__copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Переход на лендинг интенсива «Профессиональный HTML и CSS, уровень 1»">
+            <img src="img/logo-htmlacademy.svg" width="113" height="39" alt="Логотип HTML Academy">
+          </a>
         </p>
       </footer>
     </div>
