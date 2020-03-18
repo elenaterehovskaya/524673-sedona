@@ -107,6 +107,7 @@ input[type="radio"].visually-hidden {
  */
 .site-list {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 73px;
@@ -117,17 +118,22 @@ input[type="radio"].visually-hidden {
 .site-list__item {
   padding: 20px 0;
   width: 241px;
-  text-align: left;
+  text-align: center;
   box-shadow: inset 0 0 0 1px red;
 }
 
-.site-list__item:nth-child(2){
-  margin-right: auto;
+.site-list__item:nth-child(1),
+.site-list__item:nth-child(2) {
+  text-align: left;
 }
 
 .site-list__item:nth-child(3),
 .site-list__item:nth-child(4) {
   text-align: right;
+}
+
+.site-list__item:nth-child(2){
+  margin-right: auto;
 }
 
 .site-list__link {
@@ -153,9 +159,15 @@ input[type="radio"].visually-hidden {
 Блок intro — блок заставки (вступительной части) для главной стр. сайта
 ========================================================================== */
 .intro {
-  height: 510px;
+  box-sizing: border-box;
+  min-height: 510px;
   padding-top: 75px;
-  background: #81b3d2 url(../img/background-photo.jpg) top -55px center no-repeat;
+  background-color: #81b3d2;
+  background-image:
+    url("../img/intro-mask.svg"),
+    url("../img/background-photo.jpg");
+  background-position: bottom -2px center, top -55px center;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .intro__slogan {
@@ -351,7 +363,7 @@ input[type="radio"].visually-hidden {
   padding: 30px 73px;
   text-align: left;
   color: #ffffff;
-  background: #81b3d2 url(../img/filter-background.jpg) top -55px center no-repeat;
+  background: #81b3d2 url("../img/filter-background.jpg") top -55px center no-repeat;
 }
 
 .filter__form {
@@ -505,17 +517,20 @@ input[type="radio"].visually-hidden {
 .result__info {
   display: flex;
   flex-wrap: wrap;
+  width: 700px;
   padding: 0 30px;
   box-shadow: inset 0 0 0 1px red;
 }
 
 .result__title {
+  align-self: flex-start;
   width: 100%;
   margin: 0;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: #000000;
+  box-shadow: inset 0 0 0 1px red;
 }
 
 .result__title:hover,
