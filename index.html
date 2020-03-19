@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Sedona</title>
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -104,30 +104,31 @@
         </section>
 
         <section class="search-hotels">
+          <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
           <p class="search-hotels__slogan">Заинтересовались?</p>
           <p class="search-hotels__info">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <h2 class="search-hotels__headline">
-            <a href="#">Поиск гостиницы в Седоне</a>
-          </h2>
-          <form class="search-hotels__form" action="https://echo.htmlacademy.ru" method="post" target="_blank" autocomplete="off">
-            <p>
-              <label for="arrival-date">Дата заезда:</label>
-              <input id="arrival-date" type="date" name="arrival-date" value="" placeholder="24 апреля 2017">
-            </p>
-            <p>
-              <label for="departure-date">Дата выезда:</label>
-              <input id="departure-date" type="date" name="departure-date" value="" placeholder="4 июля 2017">
-            </p>
-            <p>
-              <label for="adults">Взрослые:</label>
-              <input id="adults" type="number" name="adults" value="" placeholder="2">
-            </p>
-            <p>
-              <label for="children">Дети:</label>
-              <input id="children" type="number" name="children" value="" placeholder="0">
-            </p>
-            <button class="button" type="submit">Найти</button>
-          </form>
+          <div class="search-hotels__modal modal">
+            <a class="modal__link" href="#">Поиск гостиницы в Седоне</a>
+            <form class="modal__form" action="https://echo.htmlacademy.ru" method="post" target="_blank" autocomplete="off">
+              <p class="modal__option modal__option--date">
+                <label class="modal__label" for="arrival-date">Дата заезда:</label>
+                <input class="modal__input" id="arrival-date" type="text" name="arrival-date" value="" placeholder="24 апреля 2017">
+              </p>
+              <p class="modal__option modal__option--date">
+                <label class="modal__label" for="departure-date">Дата выезда:</label>
+                <input class="modal__input" id="departure-date" type="text" name="departure-date" value="" placeholder="4 июля 2017">
+              </p>
+              <p class="modal__option modal__option--guests">
+                <label class="modal__label" for="adults">Взрослые:</label>
+                <input class="modal__input modal__input--guests" id="adults" type="text" name="adults" value="" placeholder="2">
+              </p>
+              <p class="modal__option modal__option--guests">
+                <label class="modal__label" for="children">Дети:</label>
+                <input class="modal__input modal__input--guests" id="children" type="text" name="children" value="" placeholder="0">
+              </p>
+              <button class="modal__button button" type="submit">Найти</button>
+            </form>
+          </div>
           <img class="search-hotels__map" src="img/map.jpg" width="1200" height="593" alt="Городок Седона на карте. Как проехать?">
         </section>
       </main>
@@ -136,7 +137,7 @@
         <h2 class="visually-hidden">Наши контакты</h2>
         <p class="page-footer__contact">
           <a href="#">#visitSedona</a>
-          Тел: +7(495) 666-02-66
+          <a href="tel:+74956660266">Тел: +7(495) 666-02-66</a>
         </p>
         <ul class="page-footer__list social">
           <li class="social__item">
