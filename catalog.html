@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Sedona | Hotels</title>
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -41,16 +41,16 @@
               <legend class="filter__title">Инфраструктура:</legend>
               <ul class="filter__list">
                 <li class="filter__option">
-                  <input class="visually-hidden" id="filter-pool" type="checkbox" name="pool" checked>
-                  <label for="filter-pool">Бассейн</label>
+                  <input class="filter__input visually-hidden" id="filter-pool" type="checkbox" name="pool" checked>
+                  <label class="filter__label" for="filter-pool">Бассейн</label>
                 </li>
                 <li class="filter__option">
-                  <input class="visually-hidden" id="filter-parking" type="checkbox" name="parking">
-                  <label for="filter-parking">Парковка</label>
+                  <input class="filter__input visually-hidden" id="filter-parking" type="checkbox" name="parking">
+                  <label class="filter__label" for="filter-parking">Парковка</label>
                 </li>
                 <li class="filter__option">
-                  <input class="visually-hidden" id="filter-wi-fi" type="checkbox" name="wi-fi">
-                  <label for="filter-wi-fi">Wi-fi</label>
+                  <input class="filter__input visually-hidden" id="filter-wi-fi" type="checkbox" name="wi-fi">
+                  <label class="filter__label" for="filter-wi-fi">Wi-fi</label>
                 </li>
               </ul>
             </fieldset>
@@ -58,23 +58,36 @@
               <legend class="filter__title">Тип жилья:</legend>
               <ul class="filter__list">
                 <li class="filter__option">
-                  <input class="visually-hidden" id="filter-hotel" type="checkbox" name="hotel" checked>
-                  <label for="filter-hotel">Гостиница</label>
+                  <input class="filter__input visually-hidden" id="filter-hotel" type="checkbox" name="hotel" checked>
+                  <label class="filter__label" for="filter-hotel">Гостиница</label>
                 </li>
                 <li class="filter__option">
-                  <input class="visually-hidden" id="filter-motel" type="checkbox" name="motel" checked>
-                  <label for="filter-motel">Мотель</label>
+                  <input class="filter__input visually-hidden" id="filter-motel" type="checkbox" name="motel" checked>
+                  <label class="filter__label" for="filter-motel">Мотель</label>
                 </li>
                 <li class="filter__option">
-                  <input class="visually-hidden" id="filter-apartment" type="checkbox" name="apartment" checked>
-                  <label for="filter-apartment">Апартаменты</label>
+                  <input class="filter__input visually-hidden" id="filter-apartment" type="checkbox" name="apartment" checked>
+                  <label class="filter__label" for="filter-apartment">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
-            <div>
-              <fieldset class="filter__choice filter__choice--cost">
-                <legend class="filter__title">Стоимость в сутки (Р):</legend>
-              </fieldset>
+            <div class="filter__range">
+              <p class="filter__title">Стоимость в сутки (Р):</p>
+              <div class="filter__price-controls">
+                <label class="min-price">от
+                  <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">до
+                  <input type="number" name="max-price" value="3000">
+                </label>
+              </div>
+              <div class="filter__range-controls">
+                <div class="filter__scale">
+                  <div class="filter__bar"></div>
+                </div>
+                <div class="filter__toggle filter__toggle--min"></div>
+                <div class="filter__toggle filter__toggle--max"></div>
+              </div>
               <button class="filter__button button" type="submit">Показать</button>
             </div>
           </form>
@@ -119,7 +132,10 @@
                   <a class="result__button result__button--booking" href="#">Забронировать</a>
                 </p>
               </div>
-              <p class="result__rating">Рейтинг: 8,5</p>
+              <div class="result__rating">
+                <div class="result__stars result__stars--amara-resort"></div>
+                <p class="result__number">Рейтинг: 8,5</p>
+              </div>
             </li>
             <li class="result__item">
               <img class="result__photo" src="img/hotel-2.jpg" width="135" height="90" alt="Вид на мотель Desert Quail Inn">
@@ -134,7 +150,10 @@
                   <a class="result__button result__button--booking" href="#">Забронировать</a>
                 </p>
               </div>
-              <p class="result__rating">Рейтинг: 8,9</p>
+              <div class="result__rating">
+                <div class="result__stars result__stars--desert-quail"></div>
+                <p class="result__number">Рейтинг: 8,9</p>
+              </div>
             </li>
             <li class="result__item">
               <img class="result__photo" src="img/hotel-3.jpg" width="135" height="90" alt="Вид на апартаменты Villas at Poco Diablo">
@@ -149,7 +168,10 @@
                   <a class="result__button result__button--booking" href="#">Забронировать</a>
                 </p>
               </div>
-              <p class="result__rating">Рейтинг: 9,2</p>
+              <div class="result__rating">
+                <div class="result__stars result__stars--villas-poco"></div>
+                <p class="result__number">Рейтинг: 9,2</p>
+              </div>
             </li>
           </ul>
         </section>
@@ -159,7 +181,7 @@
         <h2 class="visually-hidden">Наши контакты</h2>
         <p class="page-footer__contact">
           <a href="#">#visitSedona</a>
-          Тел: +7(495) 666-02-66
+          <a href="tel:+74956660266">Тел: +7(495) 666-02-66</a>
         </p>
         <ul class="page-footer__list social">
           <li class="social__item">
