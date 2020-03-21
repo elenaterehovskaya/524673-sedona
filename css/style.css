@@ -191,6 +191,8 @@ input[type="radio"].visually-hidden {
 }
 
 .advantages__list {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,7 +306,9 @@ input[type="radio"].visually-hidden {
 Блок search-hotels — блок поиска гостиницы для главной стр. сайта
 ========================================================================== */
 .search-hotels__slogan {
-  width: 570px;
+  position: relative;
+  z-index: 1;
+  width: 580px;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 25px;
@@ -312,18 +316,32 @@ input[type="radio"].visually-hidden {
   font-size: 30px;
   line-height: 36px;
   color: #000000;
+  background-color: #ffffff;
 }
 
 .search-hotels__info {
-  width: 570px;
+  position: relative;
+  z-index: 1;
+  width: 580px;
   margin: 0 auto;
   padding-bottom: 45px;
   line-height: 24px;
+  background-color: #ffffff;
 }
 
 /*
 Блок modal — блок модального окна для блока поиска гостиницы (search-hotels__modal)
  */
+@keyframes bounce {
+  0% {
+    transform: translateY(-395px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal {
   position: relative;
   width: 570px;
@@ -332,7 +350,9 @@ input[type="radio"].visually-hidden {
   line-height: 26px;
 }
 
-.modal__link {
+.modal__button {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   padding: 31px 0;
@@ -341,12 +361,12 @@ input[type="radio"].visually-hidden {
   background-color: #766357;
 }
 
-.modal__link:hover,
-.modal__link:focus {
+.modal__button:hover,
+.modal__button:focus {
   background-color: #604e43;
 }
 
-.modal__link:active {
+.modal__button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
 }
@@ -367,7 +387,8 @@ input[type="radio"].visually-hidden {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
-  padding: 55px 60px;
+  height: 395px;
+  padding: 50px 60px;
   font-size: 14px;
   text-align: left;
   color: #000000;
@@ -376,31 +397,40 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
+.modal__form--animation {
+  animation: bounce 1s;
+}
+
+.modal__form--close {
+  display: none;
+}
+
 .modal__option {
   position: relative;
+  display: flex;
+  align-items: baseline;
   margin: 0;
   margin-bottom: 30px;
 }
 
 .modal__option--date {
   width: 100%;
-  background: url("../img/calendar.svg") right 7px top 50% no-repeat;
 }
 
 .modal__option--guests {
-  width: 217px;
+  width: 47%;
   margin-bottom: 60px;
 }
 
-.modal__option:last-of-type {
-  width: 180px;
+.modal__option--guests-children {
+  width: 40%;
 }
 
 .modal__option--guests::before {
   content: "–";
   position: absolute;
-  right: 80px;
-  padding-top: 5px;
+  top: 5px;
+  right: 75px;
   font-size: 24px;
   color: #a9a9a9;
 }
@@ -408,8 +438,8 @@ input[type="radio"].visually-hidden {
 .modal__option--guests::after {
   content: "+";
   position: absolute;
+  top: 5px;
   right: 7px;
-  padding-top: 5px;
   font-size: 24px;
   color: #a9a9a9;
 }
@@ -417,9 +447,7 @@ input[type="radio"].visually-hidden {
 .modal__input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50%;
-  margin-left: 20px;
-  padding: 5px 10px;
+  padding: 7px 10px;
   font: inherit;
   text-transform: inherit;
   border: none;
@@ -429,33 +457,55 @@ input[type="radio"].visually-hidden {
   appearance: none;
 }
 
+.modal__input:hover {
+  background-color: #ebebeb;
+}
+
+.modal__input:focus {
+  box-shadow: inset 0 0 0 2px #e5e5e5;
+}
+
+.modal__label--date {
+  display: block;
+  width: 25%;
+}
+
+.modal__input--date {
+  position: relative;
+  display: block;
+  width: 75%;
+}
+
+.modal__date-icon {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 21px;
+  height: 22px;
+  background-image: url("../img/calendar.svg");
+  cursor: pointer;
+}
+
 .modal__input--guests {
-  width: 30px;
+  width: 36px;
   margin-left: 75px;
   text-align: center;
 }
 
-.modal__input::-webkit-input-placeholder {
-  color: #000000;
+.modal__error {
+  position: absolute;
+  top: 235px;
+  left: 60px;
+  display: none;
+  margin: 0;
+  color: #f84646;
 }
 
-.modal__input:-ms-input-placeholder {
-  color: #000000;
+.modal__error--show {
+  display: block;
 }
 
-.modal__input::-ms-input-placeholder {
-  color: #000000;
-}
-
-.modal__input::-moz-placeholder {
-  color: #000000;
-}
-
-.modal__input::placeholder {
-  color: #000000;
-}
-
-.modal__button {
+.modal__search {
   width: 100%;
   padding: 16px;
   font: inherit;
@@ -463,12 +513,12 @@ input[type="radio"].visually-hidden {
   background-color: #81b3d2;
 }
 
-.modal__button:hover,
-.modal__button:focus {
+.modal__search:hover,
+.modal__search:focus {
   background-color: #669ec0;
 }
 
-.modal__button:active {
+.modal__search:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
 }
