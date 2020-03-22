@@ -1,3 +1,5 @@
+"use strict";
+
 var buttonSearch = document.querySelector(".modal__button");
 var formSearch = document.querySelector(".modal__form");
 
